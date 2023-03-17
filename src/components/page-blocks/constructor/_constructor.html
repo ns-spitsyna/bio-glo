@@ -1,0 +1,153 @@
+<section class="constructor flex-just-center">
+    <div class="container">
+        <h2 class="constructor__title title-h2">Онлайн конструктор септика</h2>
+        <div class="constructor__wrapper">
+            <div class="constructor-accordeon accordeon">
+                <div class="accordeon__item">
+                    <div class="accordeon__head">1. Тип септика</div>
+                    <div class="accordeon__body constructor-accordeon__body accordeon__body_active">
+                        <div class="constructor-accordeon__content">
+                            <img src="../../../img/constructor/type-septic.webp" alt="Однокамерный септик">
+                            @@include('../../../components/bem-blocks/switch/_switch.html', {
+                                "class": {
+                                    "bem__elem": "switch-type mx-25"
+                                },
+                                "id": "switch-type"
+                            })
+                            <img src="../../../img/constructor/type-septic-two.webp"  alt="Двухкамерный септик">
+                            <p>камерный</p>
+                        </div>
+                        @@include('../../../components/bem-blocks/button/_button.html',{
+                            "class": {
+                                "bem__elem": "button constructor-accordeon__button"
+                            },
+                            "type": "button",
+                            "text": "Следующий шаг",
+                        })
+                    </div>
+                </div>
+
+                <div class="accordeon__item">
+                    <div class="accordeon__head">2. Диаметр и количество колец</div>
+
+                    <div class="accordeon__body constructor-accordeon__body">
+                        <div class="constructor-accordeon__content">
+                            <div class="sumps-item">
+                                <div class="sumps-item__title">ПЕРВЫЙ КОЛОДЕЦ (ПРИЕМНЫЙ)</div>
+                                <div class="sumps-item__wrapper">
+                                    <div class="sumps-item__list">
+                                        <strong>Диаметр</strong>
+                                        <select name="diameter" id="diameter" class="sumps-item__select">
+                                            <option value="1.4">1.4 метра</option>
+                                            <option value="2">2 метра</option>
+                                        </select>
+                                    </div>
+                                    <div class="sumps-item__list">
+                                        <strong>Количество колец</strong>
+                                        <select name="number" id="number" class="sumps-item__select">
+                                            <option value="1">1 штука</option>
+                                            <option value="2">2 штуки</option>
+                                            <option value="3">3 штуки</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="sumps-item">
+                                <div class="sumps-item__title">ВТОРОЙ КОЛОДЕЦ (ДРЕНАЖНЫЙ)</div>
+                                <div class="sumps-item__wrapper">
+                                    <div class="sumps-item__list">
+                                        <strong>Диаметр</strong>
+                                        <select name="diameter-2" id="diameter-2" class="sumps-item__select">
+                                            <option value="1.4">1.4 метра</option>
+                                            <option value="2">2 метра</option>
+                                        </select>
+                                    </div>
+                                    <div class="sumps-item__list">
+                                        <strong>Количество колец</strong>
+                                        <select name="number-2" id="number-2" class="sumps-item__select">
+                                            <option value="1">1 штука</option>
+                                            <option value="2">2 штуки</option>
+                                            <option value="3">3 штуки</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        @@include('../../../components/bem-blocks/button/_button.html',{
+                            "class": {
+                                "bem__elem": "button constructor-accordeon__button"
+                            },
+                            "type": "button",
+                            "text": "Следующий шаг",
+                        })
+                    </div>
+                </div>
+                <div class="accordeon__item">
+                    <div class="accordeon__head">3. Наличие днища колодца</div>
+
+                    <div class="accordeon__body constructor-accordeon__body">
+                        <div class="constructor-accordeon__content">
+                            <div class="constructor-accordeon__wrapper">
+                                @@include('../../../components/bem-blocks/switch/_switch.html', {
+                                    "class": {
+                                        "bem__elem": "switch-type switch-bottom"
+                                    },
+                                    "id": "switch-bottom"
+                                })
+                                <img src="../../../img/constructor/bottom-septic.webp" alt="Колодец">
+                            </div>
+                        </div>
+                        @@include('../../../components/bem-blocks/button/_button.html',{
+                            "class": {
+                                "bem__elem": "button constructor-accordeon__button"
+                            },
+                            "type": "button",
+                            "text": "Следующий шаг",
+                        })
+                    </div>
+                </div>
+                <div class="accordeon__item">
+                    <div class="accordeon__head">4. Расстояние от септика до дома</div>
+
+                    <div class="accordeon__body constructor-accordeon__body">
+                        <div class="constructor-accordeon__content">
+                            <p class="constructor-accordeon__clue">Введите расстояние до дома</p>
+                        </div>
+                        @@include('../../../components/bem-blocks/input/_input.html',{
+                            "class": {
+                                "bem__elem": "input constructor-accordeon__distance"
+                            },
+                            "type": "text",
+                            "name": "distance",
+                            "placeholder": "",
+                            "id": "distance",
+                        })
+                        @@include('../../../components/bem-blocks/button/_button.html',{
+                            "class": {
+                                "bem__elem": "button constructor-accordeon__button"
+                            },
+                            "type": "button",
+                            "text": "Получить расчет и скидку",
+                        })
+                    </div>
+                </div>
+
+            </div>
+            <div class="constructor__result">
+                <img src="../../../img/constructor/septic-tank.webp" class="constructor__img" alt="Септик">
+                @@include('../../../components/bem-blocks/input/_input.html',{
+                    "class": {
+                        "bem__elem": "input constructor__cost"
+                    },
+                    "type": "text",
+                    "name": "result",
+                    "placeholder": "примерная стоимость",
+                    "id": "result",
+                })
+            </div>
+
+        </div>
+    </div>
+</section>

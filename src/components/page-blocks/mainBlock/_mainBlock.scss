@@ -1,0 +1,111 @@
+.main {
+    background: url('../../../img/main/main-bg.webp') center no-repeat;
+    background-size: cover;
+    padding: 50px 0px;
+    @include breakpoint-max($bp-xs) {
+        padding: 0;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        @include breakpoint-max($bp-lg) {
+            justify-content: center;
+            flex-flow: column;
+            align-items: center;
+        }
+    }
+    &__title {
+        text-transform: uppercase;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    &__subtitle {
+        margin-bottom: 70px;
+    }
+    &__line {
+        border-bottom: 4px solid $color__green;
+    }
+    &__guarantee {
+        text-transform: uppercase;
+        margin: 20px 0 50px;
+    }
+    &__services {
+        margin-top: 30px;
+        margin-right: 10px;
+        @include breakpoint-max($bp-lg) {
+            margin-bottom: 30px;
+        }
+    }
+    &__form {
+        max-width: 390px;
+        width: auto;
+        padding: 30px 58px 20px;
+        @include breakpoint-max($bp-md) {
+            padding: 30px 58px 20px;
+        }
+        @include breakpoint-max($bp-sm) {
+            margin-bottom: 20px;
+            padding: 30px;
+        }
+    }
+    &__info {
+        width: 55%;
+        font-size: 18px;
+        line-height: 20px;
+        text-align: center;
+        @include breakpoint-max($bp-md) {
+            width: 100%;
+        }
+    }
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint-max($bp-sm) {
+        flex-flow: column;
+        align-items: center;
+    }
+    &__item {
+        width: 131px;
+    }
+    &__images {
+        width: 100%;
+    }
+    &__name {
+        font-family: 'MuseoSansCyrl-700',sans-serif;
+        font-size: 16px;
+    }
+}
+
+.form-consultation {
+    background-color: $color__white;
+    border: 2px solid $color__green;
+    text-align: center;
+    &__title {
+        margin-bottom: 10px;
+    }
+    &__info {
+        font-size: 14px;
+        font-family: 'MuseoSansCyrl-700',sans-serif;
+        line-height: 20px;
+    }
+    &__phone {
+        margin-bottom: 20px;
+    }
+    &__button {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    &__stock {
+        font-family: 'MuseoSansCyrl-700', sans-serif;
+        color: $color__green;
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 10px;
+        @include breakpoint-max($bp-sm) {
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+}

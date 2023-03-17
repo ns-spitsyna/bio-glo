@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+}
+
+html,
+body {
+	min-height: 100%;
+	position: relative;
+}
+
+body {
+	font-size: 1rem;
+	margin: 0;
+	font-family: 'MuseoSansCyrl-300', sans-serif;
+}
+
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'MuseoSansCyrl-700', sans-serif;
+	text-align: center;
+}
+
+.title-h1 {
+	font-size: 24px;
+	line-height: 32px;
+
+	@include breakpoint-min($bp-md) {
+		font-size: 28px;
+		line-height: 36px;
+	}
+	@include breakpoint-min($bp-xl) {
+		font-size: 30px;
+		line-height: 40px;
+	}
+}
+
+.title-h2 {
+	font-family: 'MuseoSansCyrl-500', sans-serif;
+	font-size: 36px;
+	font-weight: 500;
+	line-height: 40px;
+	@include breakpoint-max($bp-md) {
+		font-size: 34px;
+		line-height: 36px;
+	}
+	@include breakpoint-max($bp-xs) {
+		font-size: 30px;
+    	line-height: 32px;
+	}
+}
+
+.title-h3 {
+	font-size: 22px;
+	line-height: 24px;
+	@include breakpoint-max($bp-md) {
+		font-size: 20px;
+		line-height: 22px;
+	}
+}
+
+.crossed-out {
+	text-decoration: line-through;
+}
+
+.text {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.small {
+    font-family: 'MuseoSansCyrl-300', sans-serif;
+    font-size: 10px;
+    line-height: 15px;
+    color: #333;
+}
+.container {
+    width: 100%;
+	max-width: 1140px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+	@include breakpoint-max($bp-xl) {
+		max-width: 1140px;
+	}
+	@include breakpoint-max($bp-lg) {
+		max-width: 960px;
+	}
+	@include breakpoint-max($bp-md) {
+		max-width: 720px;
+	}
+	@include breakpoint-max($bp-sm) {
+		max-width: 540px;
+	}
+	@include breakpoint-max($bp-xs) {
+		width: 100%;
+	}
+
+}
+
+.flex-just-center {
+	display: flex;
+	justify-content: center;
+}
+
+.mx-25 {
+	margin: 0 25px;
+}

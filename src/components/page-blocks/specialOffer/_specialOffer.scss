@@ -1,0 +1,85 @@
+.special-offer {
+    padding: 90px 0;
+    @include breakpoint-max($bp-sm) {
+        padding: 60px 0;
+    }
+    &__title {
+        font-family: 'MuseoSansCyrl-500',sans-serif;
+        text-align: center;
+        font-weight: 500;
+        margin-bottom: 80px;
+        @include breakpoint-max($bp-sm) {
+            margin-bottom: 60px;
+        }
+    }
+}
+.offer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+    @include breakpoint-max($bp-sm) {
+        justify-content: center;
+    }
+    &__item {
+        width: 33.333%;
+        height: 538px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 20px;
+        @include breakpoint-max($bp-md) {
+            width: 50%;
+        }
+        @include breakpoint-max($bp-sm) {
+            width: 100%;
+            max-width: 390px;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        min-height: 100%;
+        padding: 20px;
+        border: 1px solid #b1b0b0;
+        &:hover {
+            box-shadow: 0 0 15px #000;
+            transition: box-shadow 0.5s;
+            cursor: pointer;
+        }
+    }
+    &__wrap-btn {
+        display: flex;
+        justify-content: center;
+    }
+    &__img {
+        height: 278px;
+    }
+    &__name {
+        font-family: 'MuseoSansCyrl-500',sans-serif;
+        font-size: 23px;
+        line-height: 25px;
+    }
+    &__old-price {
+        font-size: 18px;
+        color: #858585;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    &__price {
+        font-size: 30px;
+        font-family: 'MuseoSansCyrl-700',sans-serif;
+        margin-bottom: 20px;
+    }
+    &__button {
+        width: 100%;
+        max-width: 270px;
+        font-size: 16px;
+    }
+    &__button-more {
+        width: 130px;
+        height: 42px;
+    }
+}

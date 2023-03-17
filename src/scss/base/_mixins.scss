@@ -1,0 +1,78 @@
+$bp-xs: 320px;
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
+
+@mixin font-face($name, $file, $weight: 400, $style: normal) {
+	@font-face {
+		font-family: $name;
+		src: local($file),
+		url('../fonts/#{$file}.woff2') format('woff2'),
+		url('../fonts/#{$file}.woff') format('woff');
+		font-weight: $weight;
+		font-style: $style;
+		font-display: swap;
+	}
+}
+
+@mixin btn_anim($scaleMax:1.05, $scaleMin:0.95) {
+	transform-origin: center center;
+	transition: all ease-out 240ms;
+	&:hover {
+		transform: scale(#{$scaleMax});
+		@include breakpoint-max($bp-lg) {
+            transform: none;
+        }
+	}
+	&:focus {
+		outline: transparent;
+	}
+	&:focus-visible {
+		transform: scale(#{$scaleMax}) translateY(-5%);
+	}
+	&:active {
+		transform: scale(#{$scaleMin});
+	}
+}
+
+@mixin no-btn ($display:"inline-block") {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background-color: transparent;
+	border-radius: 0;
+	cursor: pointer;
+	appearance: none;
+	display: #{$display};
+}
+
+@mixin transit ($tr:0.24) {
+	transition: all #{$tr}s;
+}
+
+
+@mixin placeholder {
+    &::-webkit-input-placeholder { @content; }
+    &:-moz-placeholder           { @content; }
+    &::-moz-placeholder          { @content; }
+    &:-ms-input-placeholder      { @content; }
+}
+
+@mixin breakpoint-min($bp) {
+    @media (min-width: $bp) {
+        @content;
+    }
+}
+
+@mixin breakpoint-max($bp) {
+    @media (max-width: $bp) {
+        @content;
+    }
+}
+
+@mixin breakpoint-min-max($bp1, $bp2) {
+    @media (min-width: $bp1) and (max-width: $bp2) {
+        @content;
+    }
+}

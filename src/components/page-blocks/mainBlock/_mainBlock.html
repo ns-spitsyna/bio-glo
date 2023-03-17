@@ -1,0 +1,57 @@
+<section class="main flex-just-center">
+    <div class="container">
+        <h1 class="main__title title-h1">ПРОИЗВОДИМ И УСТАНАВЛИВАЕМ БЕТОННЫЕ <br>СЕПТИКИ ПОД КЛЮЧ</h1>
+        <h2 class="main__subtitle title-h3">Которые служат более полувека и не требуют откачки <span class="main__line">до 20 лет</span></h2>
+        <div class="main__wrapper">
+            <div class="main__info">
+                <p>Монтаж колец самогрузом - бесплатно!</p>
+                <p class="main__guarantee">ГАРАНТИЯ 2 ГОДА НА КАЖДЫЙ МОНТАЖ</p>
+                <p>Монтируем под ключ:</p>
+                <div class="main__services services">
+                    <div class="services__item">
+                        <img src="../../../img/main/1.webp" class="services__images" alt="Бетонные септики">
+                        <div class="services__name">Бетонные септики</div>
+                    </div>
+                    <div class="services__item">
+                        <img src="../../../img/main/2.webp" class="services__images" alt="Автономные канализации">
+                        <div class="services__name">Автономные канализации</div>
+                    </div>
+                    <div class="services__item">
+                        <img src="../../../img/main/3.webp" class="services__images" alt="Выгребные ямы">
+                        <div class="services__name">Выгребные ямы</div>
+                    </div>
+                    <div class="services__item">
+                        <img src="../../../img/main/4.webp" class="services__images" alt="Погреба">
+                        <div class="services__name">Погреба</div>
+                    </div>
+                </div>
+            </div>
+            <form action="#" class="main__form form-consultation">
+                    <h3 class="form-consultation__title title-h3">Заказать консультацию!</h3>
+                    <div class="form-consultation__info">Не знаете как построить канализацию?<br>
+                        Закажите бесплатную консультацию<br>
+                        мы подскажем и подготовим проект и смету
+                    <p>Ваш телефон для получения скидки</p>
+                    </div>
+                @@include('../../../components/bem-blocks/input/_input.html',{
+                    "class": {
+                        "bem__elem": "input form-consultation__phone"
+                    },
+                    "type": "text",
+                    "name": "user_phone",
+                    "id":"user_phone",
+                    "placeholder": "+7 (___) ___-__-__",
+                })
+                @@include('../../../components/bem-blocks/button/_button.html',{
+                    "class": {
+                        "bem__elem": "button form-consultation__button"
+                    },
+                    "type": "submit",
+                    "text": "Получить консультацию",
+                })
+                <div class="small">Заполнения заявки Вас ни к чему не обязывает!<br> Вы сможете отказаться в любой момент</div>
+                <div class="form-consultation__stock">Осталось 3 места на май!</div>
+            </form>
+        </div>
+    </div>
+</section>
